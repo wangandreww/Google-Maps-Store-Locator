@@ -13,13 +13,15 @@ function initMap() {
       mapTypeId: 'roadmap',
     });
 
+    infoWindow = new google.maps.InfoWindow();
+
     storeMarkers();
 }
 
 
 
 function storeMarkers(){
-
+  var bounds = new google.maps.LatLngBounds();
   stores.forEach(function(store,index){
     var latlng = new google.maps.LatLng(
       store.coordinates.latitude,
@@ -27,17 +29,22 @@ function storeMarkers(){
 
       var name= store.name;
       var address= store.addressLines[0];
-      createMarker(latlng,name,address);
+      createMarker(latlng,name,address,index);
+      bounds.extend(latlng);
   })
+
+  map.fitBounds(bounds);
 
 }
 
 
-function createMarker(latlng,name,address){
+function createMarker(latlng, name, address, index){
   var html = "<b>" + name + "</b> <br/>" + address;
   var marker = new google.maps.Marker({
     map: map,
-    position: latlng
+    position: latlng,
+    animation: google.maps.Animation.DROP,
+    label: `${index+1}`
   });
   google.maps.event.addListener(marker, 'click', function() {
     infoWindow.setContent(html);
