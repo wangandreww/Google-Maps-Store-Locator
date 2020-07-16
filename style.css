@@ -17,22 +17,22 @@ body {
 
 .title{
     position: absolute;
-    font-size: 70px;
+    font-size: 50px;
     color: #333;
     text-transform: uppercase;
     z-index: 100;
     font-weight: bold;
-    top: 100px;
+    top: 50px;
     left: 100px;
 }
 
 .search-container{
     position: absolute;
-    width: 400px;
-    height: 60px;
+    width: 370px;
+    height: 50px;
     background-color: #454E53;
     z-index: 100;
-    top: 220px;
+    top: 120px;
     left: 100px;
     border-radius: 30px;
     display: flex;
@@ -61,4 +61,69 @@ body {
 .search-container i{
     font-size: 25px;
     color: white;
+    
+}
+
+.store-list-container{
+    position: absolute;
+    background: white;
+    width: 370px;
+    z-index: 100;
+    top: 180px;
+    left: 100px;
+    border-radius: 20px;
+    bottom: 20px;
+}
+
+.store-address{
+    font-size: 21px;
+    color: #514c4c;
+    margin-top: 30px;
+
+}
+
+.store-phone-number{
+    color: #b5adad;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.store-number{
+    width: 30px;
+    height: 30px;
+    display: flex;
+    background-color: #454E53;
+    color: #b5adad;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.store-address span{
+    display: block;
+}
+
+.store-container-background{
+    display: flex;
+}
+
+.stores-list{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+
+.store-info-container{
+    flex-grow: 1;
+}
+
+
+.store-container{
+    border-bottom: 2px solid grey;
+    z-index: 100;
+}
+
+.store-number-container{
+    display: flex;
+    align-items: center;
 }
