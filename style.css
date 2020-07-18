@@ -73,6 +73,7 @@ body {
     left: 100px;
     border-radius: 20px;
     bottom: 20px;
+    display: flex
 }
 
 .store-address{
@@ -110,6 +111,9 @@ body {
 .stores-list{
     padding-left: 20px;
     padding-right: 20px;
+    overflow-y: scroll;
+    flex-grow: 1;
+
 }
 
 
@@ -121,6 +125,7 @@ body {
 .store-container{
     border-bottom: 2px solid grey;
     z-index: 100;
+    cursor: pointer;
 }
 
 .store-number-container{
