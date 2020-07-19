@@ -10,7 +10,17 @@
         <div class="search-container">
                 <div class="search">
                     <input id="zip-code-input" type="text" placeholder="Enter Zipcode">
-                    <i class="fas fa-search"></i>
+                    
+                    <i class="fas fa-search" onclick="searchStores()"></i>
+                    <script>
+                        var input = document.getElementById("zip-code-input");
+                        input.addEventListener("keyup", function(event) {
+                            if (event.keyCode === 13) {
+                                event.preventDefault();
+                                document.getElementById("myBtn").click();
+                            }
+                        });
+                        </script>
                 </div>
         </div>
         <div class="store-list-container">
